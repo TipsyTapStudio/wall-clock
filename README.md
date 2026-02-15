@@ -1,73 +1,76 @@
-# React + TypeScript + Vite
+# WALL-CLOCK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**The Digital Gear** — A browser-based wall clock built for display longevity and circadian care.
 
-Currently, two official plugins are available:
+Developed by [Tipsy Tap Studio](https://github.com/TipsyTapStudio).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+### Pixel Shifter 2.0
+Automatically shifts the clock display by ±2 pixels every 10 minutes to statistically prevent OLED/LCD burn-in.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Circadian Eye Care
+The **Dynamic** theme maps a full HSL color cycle to the 24-hour day and activates a warm, low-saturation night mode between 22:00 and 06:00.
 
-## Expanding the ESLint configuration
+### Zero-Waste Engine
+When seconds display is disabled, the clock updates only once per minute — minimizing CPU/GPU usage for always-on displays.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Theme Customization
+Four built-in themes to match any environment:
+- **Dynamic** — HSL gradient that follows the time of day
+- **Amber** — Warm retro terminal aesthetic
+- **Phosphor** — Classic green CRT look
+- **Midnight** — High-contrast monochrome
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Ghost UI
+Settings panel stays hidden until you interact. Move the mouse or tap the screen to reveal configuration options, which auto-hide after 3 seconds of inactivity.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Configuration Sharing
+Share your clock setup with anyone via a compact URL. Settings are serialized into short query parameters for easy sharing and bookmarking.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Internationalization
+Full support for English and Japanese, including locale-aware date formatting.
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open the app in any modern browser and go full-screen for the best experience.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Settings
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Option       | Description                              |
+|--------------|------------------------------------------|
+| Language     | English / Japanese                       |
+| Theme        | Dynamic, Amber, Phosphor, Midnight       |
+| Font         | JetBrains Mono, Geist, Inter, Noto Serif JP |
+| Font Size    | Continuously adjustable (4–28 vw)        |
+| 24-Hour      | Toggle 24h / 12h format                  |
+| Show Seconds | Toggle seconds display                   |
+| Blink Colon  | Toggle colon blinking animation          |
+| Show Date    | Toggle locale-aware date display         |
+
+## Tech Stack
+
+- **React 19** + **TypeScript**
+- **Vite 7** — Fast build tooling
+- **Tailwind CSS 4** — Utility-first styling
+- **Google Fonts** — JetBrains Mono, Geist, Inter, Noto Serif JP
+
+No external state management libraries — all state is handled with React hooks, LocalStorage, and URL parameters.
+
+## License
+
+[MIT](./LICENSE) — Tipsy Tap Studio
