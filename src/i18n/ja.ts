@@ -1,0 +1,18 @@
+export const ja = {
+  settings: '設定',
+  language: '言語',
+  format24h: '24時間表示',
+  showSeconds: '秒表示',
+  blinkColon: 'コロン点滅',
+  showDate: '日付表示',
+  font: 'フォント',
+  theme: 'テーマ',
+  fontSize: 'サイズ',
+  shareConfig: '設定をURLで共有',
+  resetDefaults: '初期設定に戻す',
+  copied: 'コピー完了！',
+  dynamic: 'ダイナミック',
+  amber: 'アンバー',
+  phosphor: 'フォスファー',
+  midnight: 'ミッドナイト',
+} as const

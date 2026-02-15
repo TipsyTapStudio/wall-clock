@@ -1,0 +1,18 @@
+export const en = {
+  settings: 'Settings',
+  language: 'Language',
+  format24h: '24-Hour',
+  showSeconds: 'Seconds',
+  blinkColon: 'Blink Colon',
+  showDate: 'Date',
+  font: 'Font',
+  theme: 'Theme',
+  fontSize: 'Size',
+  shareConfig: 'Share Configuration',
+  resetDefaults: 'Reset to Default',
+  copied: 'Copied!',
+  dynamic: 'Dynamic',
+  amber: 'Amber',
+  phosphor: 'Phosphor',
+  midnight: 'Midnight',
+} as const
