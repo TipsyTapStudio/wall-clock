@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react'
+import { useEffect, useCallback, useState } from 'react'
 import type { ClockConfig } from '../store/useConfig.ts'
 import { serializeConfig, deserializeConfig } from '../utils/serialization.ts'
 
@@ -10,9 +10,9 @@ export function useUrlSync(): {
   urlOverrides: Partial<ClockConfig>
   copyShareUrl: (config: ClockConfig) => Promise<boolean>
 } {
-  const urlOverrides = useRef(
+  const [urlOverrides] = useState(() =>
     deserializeConfig(window.location.search),
-  ).current
+  )
 
   // Clean URL after reading params (don't pollute address bar during use)
   useEffect(() => {
