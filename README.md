@@ -4,6 +4,8 @@
 
 **[Live Demo](https://tipsytapstudio.github.io/wall-clock/)**
 
+![WALL-CLOCK Screenshot](docs/screenshot.png)
+
 Developed by [Tipsy Tap Studio](https://github.com/TipsyTapStudio).
 
 ## Features
