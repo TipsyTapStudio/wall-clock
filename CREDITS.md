@@ -23,6 +23,7 @@ All fonts are served via [Google Fonts](https://fonts.google.com/):
 
 - **[ESLint](https://eslint.org/)** — JavaScript/TypeScript linter (MIT License)
 - **[@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react)** — React plugin for Vite (MIT License)
+- **[Claude Code](https://claude.com/claude-code)** — AI coding assistant by Anthropic
 
 ---
 

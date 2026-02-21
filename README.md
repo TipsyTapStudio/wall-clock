@@ -2,6 +2,8 @@
 
 **The Digital Gear** — A browser-based wall clock built for display longevity and circadian care.
 
+**[Live Demo](https://tipsytapstudio.github.io/wall-clock/)**
+
 Developed by [Tipsy Tap Studio](https://github.com/TipsyTapStudio).
 
 ## Features

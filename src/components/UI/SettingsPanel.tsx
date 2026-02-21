@@ -3,6 +3,9 @@ import type { ClockConfig, FontFamily, ThemeMode } from '../../store/useConfig.t
 import { useTranslation } from '../../i18n/useTranslation.ts'
 import type { TranslationKey } from '../../i18n/useTranslation.ts'
 
+declare const __APP_VERSION__: string
+const APP_VERSION = __APP_VERSION__
+
 interface Props {
   config: ClockConfig
   setConfig: (patch: Partial<ClockConfig>) => void
@@ -153,6 +156,14 @@ export function SettingsPanel({ config, setConfig, resetConfig, copyShareUrl, vi
           <button onClick={resetConfig} className="ghost-button ghost-button--subtle w-full">
             {t('resetDefaults')}
           </button>
+        </div>
+
+        {/* Version */}
+        <div
+          className="mt-3 text-center text-xs"
+          style={{ color: 'rgba(255, 255, 255, 0.15)' }}
+        >
+          v{APP_VERSION}
         </div>
       </div>
     </div>
